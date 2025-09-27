@@ -34,7 +34,7 @@ fun BusinessCard(modifier: Modifier = Modifier) {
         ) {
 
             NameCard(
-                name = "Angelery Cantero",
+                name = "Angel Cantero",
                 title = "Android Developer Extraordinaire",
                 logoResId = R.drawable.android_logo,
                 modifier = Modifier.padding(bottom = 24.dp,top=200.dp)
