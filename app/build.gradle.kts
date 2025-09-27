@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.businesscard"
+    namespace = "com.example.practice2_1_proyecto"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.businesscard"
+        applicationId = "com.example.practice2_1_proyecto"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
