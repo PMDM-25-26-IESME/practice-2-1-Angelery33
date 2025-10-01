@@ -21,7 +21,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    BusinessCard()
+                    BusinessCard(
+                        "Angel Cantero",
+                        "+11 (123) 444 555 666",
+                        "@AndroidDev",
+                        "ang.cantero@android.com",
+                        "Android Developer Extraordinaire",
+                        R.drawable.android_logo, 
+
+
+                    )
                 }
             }
         }
