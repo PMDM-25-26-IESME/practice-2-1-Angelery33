@@ -1,15 +1,14 @@
 package com.example.practice2_1_proyecto.ui.theme
 
 
+import android.graphics.drawable.Drawable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Call
-import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,7 +20,7 @@ import com.example.practice2_1_proyecto.R
 
 
 @Composable
-fun BusinessCard(modifier: Modifier = Modifier) {
+fun BusinessCard(nom: String,tlf : String, con : String, mail : String, tit : String, logo: Int, modifier : Modifier = Modifier) {
     Surface(
         modifier = modifier.fillMaxSize(),
         color = Color(0xFFE0F2F1)
@@ -34,9 +33,9 @@ fun BusinessCard(modifier: Modifier = Modifier) {
         ) {
 
             NameCard(
-                name = "Angel Cantero",
-                title = "Android Developer Extraordinaire",
-                logoResId = R.drawable.android_logo,
+                name = nom,
+                title = tit,
+                logoResId = logo,
                 modifier = Modifier.padding(bottom = 24.dp,top=200.dp)
             )
             Spacer(modifier = Modifier.height(200.dp))
@@ -45,11 +44,11 @@ fun BusinessCard(modifier: Modifier = Modifier) {
 
             ContactCard(
                 tlfIcon = Icons.Filled.Call,
-                tlfNum = "+11 (123) 444 555 666",
+                tlfNum = tlf,
                 socialIcon = Icons.Filled.Share,
-                contacto = "@AngelDev",
+                contacto = con,
                 emailIcon = Icons.Filled.Email,
-                correo = "ang.cantero@android.com",
+                correo = mail,
 
             )
         }
@@ -60,7 +59,15 @@ fun BusinessCard(modifier: Modifier = Modifier) {
 @Composable
 fun BusinessCardLayoutVerticalPreview() {
     Practice2_1_ProyectoTheme {
-        BusinessCard()
+        BusinessCard(
+            "Angel Cantero",
+            "+11 (123) 444 555 666",
+            "@AndroidDev",
+            "ang.cantero@android.com",
+            "Android Developer Extraordinaire",
+            R.drawable.android_logo,
+
+        )
     }
 
 }

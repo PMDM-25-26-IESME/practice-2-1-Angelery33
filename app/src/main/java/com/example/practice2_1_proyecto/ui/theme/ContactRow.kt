@@ -1,6 +1,5 @@
 package com.example.practice2_1_proyecto.ui.theme
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
@@ -14,8 +13,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
 
-
-    @Composable
+@Composable
     fun ContactRow(icon: ImageVector, text: String, modifier: Modifier = Modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(imageVector = icon, contentDescription = null,tint = Color(0xFF00695C))
